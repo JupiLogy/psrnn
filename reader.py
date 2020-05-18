@@ -12,7 +12,7 @@ import tensorflow as tf
 
 
 def _read_words(filename):
-  with tf.gfile.GFile(filename, "r") as f:
+  with tf.io.gfile.GFile(filename, "r") as f:
     return list(f.read())
 
 def _build_vocab(filename):

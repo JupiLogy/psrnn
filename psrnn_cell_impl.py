@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-class PSRNNCell(tf.contrib.rnn.RNNCell):
+class PSRNNCell(tf.compat.v1.nn.rnn_cell.RNNCell):
 
   def __init__(self, num_units, params, reuse=None):
     super(PSRNNCell, self).__init__(_reuse=reuse)

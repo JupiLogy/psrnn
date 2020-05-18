@@ -21,8 +21,8 @@ import reader
 import psrnn_cell_impl
 import two_stage_regression
 
-flags = tf.flags
-logging = tf.logging
+flags = tf.compat.v1.flags
+logging = tf.compat.v1.logging
 
 flags.DEFINE_string("data_path", None,
                     "Where the training/test data is stored.")
@@ -349,4 +349,4 @@ def main(_):
       print("validation acc\n",valid_acc_all)
 
 if __name__ == "__main__":
-  tf.app.run()
+  tf.compat.v1.app.run()
